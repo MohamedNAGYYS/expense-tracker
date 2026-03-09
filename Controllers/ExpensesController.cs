@@ -132,24 +132,3 @@ namespace Finance.Controllers
 
     }
 }
-
-
-
-
-/*
-Create():
-
-
-_expenses.Any() ? _expenses.Max(e => e.Id) + 1 : 1; =====> Condition ? value if true : value if false.
-= So it means, get the highest id if there's already an expense, else set the id 1 value.
-
-_expenses.Any() = It checks if there's already any expense in the list
-_expenses.Max(e => e.Id) = It gets the highest existing id.
-+1 = Creates the next id for the new expense
-:1 = If the list is empty, start id from 1
-
-
-
-
-
-*/
