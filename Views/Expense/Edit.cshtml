@@ -1,0 +1,25 @@
+@model Expense
+
+<h2>Edit Expense</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id"/>
+
+    <label asp-for="Description"></label>
+    <input asp-for="Description" class="form-control"/>
+
+    <br />
+
+    <label asp-for="Amount"></label>
+    <input asp-for="Amount" class="form-control"/>
+
+    <br />
+
+    <label asp-for="Category"></label>
+    <input asp-for="Category" class="form-control"/>
+
+    <br />
+    <button type="submit" class="btn btn-outline-success" style="border-radius: 10px;">Save Chagnes</button>
+    <a class="btn btn-outline-secondary" asp-action="Index" style="border-radius: 10px;">Home</a>
+
+</form>

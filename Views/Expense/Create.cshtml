@@ -1,0 +1,44 @@
+@model Expense // Means, this page works with an Expense model
+
+<h2>Create Expense</h2>
+
+
+<form method="post" asp-action="Create">
+
+    <div asp-validation-summary="All"></div> @*It shows all errors at the top*@
+
+    <div class="mb-3">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control"/>
+        <span asp-validation-for="Description"></span> @*It shows Description errors at the top*@
+    </div>
+    
+    <br />
+
+    <div class="mb-3">
+        <label asp-for="Amount"></label>
+        <input asp-for="Amount" class="form-control"/>
+        <span asp-validation-for="Amount"></span> @*It shows Amount errors at the top*@
+    </div>
+
+    <br />
+    
+
+    <div class="mb-3">
+        <label asp-for="Category"></label>
+        <input asp-for="Category" class="form-control"/>
+        <span asp-validation-for="Category"></span> @*It shows Category errors at the top*@
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-outline-success" style="border-radius: 10px;">Save</button>
+    <a class="btn btn-outline-secondary" asp-action="Index" style="border-radius: 10px;">Home</a>
+</form>
+
+
+
+@*This enables JS validation before submitting the form*@
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
